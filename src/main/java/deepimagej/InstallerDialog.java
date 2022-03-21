@@ -237,11 +237,11 @@ public class InstallerDialog extends JDialog implements ItemListener, ActionList
 			if (name != null && !name.equals("")) {
 				Model model = zoo.models.get(name);
 				if (model != null) {
-					info.append("h1", model.name);
-					info.append("i", model.authors);
+					info.append("h1 text-align:center", model.name);
+					info.append("i text-align:center", model.authors);
 					info.appendLink(model.doc, "Read documentation");
-					info.append("p", model.getCoverHTML());
-					info.append("p", "small", model.desc);
+					info.append("p text-align:center", model.getCoverHTML());
+					info.append("h2 text-align:center", "large", model.desc);
 					chk.setEnabled(model.deepImageJ);	
 				}
 			}
